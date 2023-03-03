@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    map<int,int>maps;
+    int n;
+    cin>>n;
+
+    int a[n];
+    for(int i=0; i<n; i++){
+        cin>>a[i];
+        maps[a[i]]++;
+    }
+
+    for(auto pr: maps){
+        //cout<<pr.first<<"->"<<pr.second<<endl;
+        if(pr.second%2!=0){
+            cout<<"Lucky"<<endl;
+            break;
+        }
+        else{
+            cout<<"Unlucky"<<endl;
+             break;
+        }
+    }
+    
+    
+    return 0;
+}
