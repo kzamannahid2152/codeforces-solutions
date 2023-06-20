@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int tstcse;
+    cin>>tstcse;
+
+    while(tstcse--){
+        int n_size;
+        cin>>n_size;
+
+        int arra[n_size];
+        for(int i=0; i<n_size; i++){
+            cin>>arra[i];
+        }
+
+        sort(arra, arra+n_size);
+        int ans=0;
+
+        for(int i=0; i<n_size/2; i++){
+            ans += abs(arra[i]- arra[n_size-i-1]);
+        }
+        cout<<ans<<endl;
+    }
+
+    return 0;
+}
